@@ -1,0 +1,22 @@
+<main>
+    <form>
+        <h2>Submit Score</h2>
+        <div class="innerForm">
+            <label for="theme">Theme: </label>
+            <select [(ngModel)]="score.rubricTheme" required id="theme" name="theme">
+                <option *ngFor="let theme of themes" [value]="theme.theme">{{ theme.theme }}</option>
+            </select><br>
+
+            <label for="week">Week: </label>
+            <input [(ngModel)]="score.week" required type="number" min="0" max="15" id="week" name="week"><br>
+
+            <label for="note">Note: </label>
+            <textarea [(ngModel)]="score.note" rows="3" id="note" name="note"></textarea><br>
+
+            <label for="score">Score: </label>
+            <input [(ngModel)]="score.value" required type="number" min="0" max="5" id="score" name="score"><br>
+        </div>
+        <span>{{message}}</span><br>
+        <button type="button" (click)="submitScore()">Submit</button>
+    </form>
+</main>

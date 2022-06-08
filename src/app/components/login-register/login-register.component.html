@@ -1,0 +1,29 @@
+<main>
+    <form *ngIf="showLogin">
+        <h2>Login</h2>
+        <div class="innerForm">
+            <label for="firstName">First Name: </label>
+            <input type="text" [(ngModel)]="firstName" id="firstName" name="firstName"><br>
+            <label for="lastName">Last Name: </label>
+            <input type="text" [(ngModel)]="lastName" id="lastName" name="lastName"><br>
+            <label for="code">Code: </label>
+            <input type="password" [(ngModel)]="code" id="code" name="code"><br>
+        </div>
+        <button type="button" (click)="submitLogin()">Submit</button><br>
+        <a (click)="switchForm()">Don't have an account? Click here to register.</a>
+    </form>
+    <form *ngIf="!showLogin">
+        <h2>Register</h2>
+        <div class="innerForm">
+            <label for="firstName">First Name: </label>
+            <input required type="text" id="firstName" name="firstName"><br>
+            <label for="lastName">Last Name: </label>
+            <input required type="text" id="lastName" name="lastName"><br>
+        </div>
+        <button type="button" (click)="submitRegister()">Submit</button><br>
+        <a (click)="switchForm()">Already have an account? Click here to log in.</a>
+    </form>
+    <div *ngIf="loading">
+        Loading...
+    </div>
+</main>

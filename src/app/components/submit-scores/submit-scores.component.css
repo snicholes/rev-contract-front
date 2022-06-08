@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    min-width: 25%;
+}
+
+.innerForm {
+    display: grid;
+    grid-template: 
+    "label input"
+    / 30% 60% 10%;
+}

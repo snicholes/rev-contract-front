@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    color: #474c55;
+    font-family: 'futura-std-medium', sans-serif;
+    font-size:16pt;
+}
+
+input, select, textarea {
+    font-size:16pt;
+}
+
+main {
+    margin-top:1em;
+    border: 3px solid #b9b9ba;
+    padding:2em;
+}
+
+@font-face {
+    font-family: "futura-std-medium";
+    src: url("./assets/fonts/Futura-Std-Medium.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "futura-std-bold";
+    src: url("./assets/fonts/Futura-Std-Bold.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "futura-std-book";
+    src: url("./assets/fonts/Futura-Std-Book.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "futura-std-heavy";
+    src: url("./assets/fonts/Futura-Std-Heavy.otf") format('opentype');
+}

@@ -1,0 +1,10 @@
+<main>
+    <h1>Welcome, {{ associate.firstName }}</h1>
+    <h2>Your Score Summary</h2>
+    <h3>Overall: {{ scoreSummary.overall | number:'1.2-2' }}</h3>
+    <ul>
+        <li *ngFor="let score of scoreSummary | keyvalue">
+            {{ score.key }}: {{ $any(score).value | number:'1.2-2' }}
+        </li>
+    </ul>
+</main>
