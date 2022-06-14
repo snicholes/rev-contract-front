@@ -46,4 +46,15 @@ button {
     height: 2em;
     align-self: center;
     margin-left: 2em;
+    border:2px solid transparent;
+}
+
+button:hover {
+    background-color: #ffcf00;
+}
+
+button:active {
+    background-color: white;
+    border-color: #ffcf00;
+    color:#ffcf00;
 }

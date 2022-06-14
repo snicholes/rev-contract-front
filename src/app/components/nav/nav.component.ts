@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Associate } from 'src/app/models/associate';
 import { UserService } from 'src/app/services/user.service';
 
@@ -8,9 +9,9 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  loggedInUser!:Associate;
+  @Input() loggedInUser!:Associate;
 
-  constructor(private userServ: UserService) { }
+  constructor(private userServ: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.userServ.checkLogin();
@@ -19,6 +20,7 @@ export class NavComponent implements OnInit {
 
   logOut(): void {
     this.userServ.setUser(null);
+    this.router.navigate(['/']);
   }
 
 }

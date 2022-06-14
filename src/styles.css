@@ -25,6 +25,29 @@ nav, main {
     padding-right: 12em;
 }
 
+button {
+    background-color: #ff7014;
+    color: white;
+    font-size:16pt;
+    font-family: 'apercu-regular', 'futura-pt-medium', sans-serif;
+    border-radius: 20px;
+    padding:.5em 1.5em 1.5em 1.5em;
+    height: 2em;
+    align-self: center;
+    margin-left: 2em;
+    border:2px solid transparent;
+}
+
+button:hover {
+    background-color: #ffcf00;
+}
+
+button:active {
+    background-color: white;
+    border-color: #ffcf00;
+    color:#ffcf00;
+}
+
 @font-face {
     font-family: "futura-std-medium";
     src: url("./assets/fonts/Futura-Std-Medium.otf") format('opentype');
