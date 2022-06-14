@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    color: #474c55;
-    font-family: 'futura-std-medium', sans-serif;
+    color: white;
+    font-family: 'apercu-regular', 'futura-pt-medium', sans-serif;
     font-size:16pt;
+}
+
+h1 {
+    font-family:'degular', 'futura-pt-bold', sans-serif;
 }
 
 input, select, textarea {
@@ -10,9 +14,15 @@ input, select, textarea {
 }
 
 main {
+    background-color:#00183c;
     margin-top:1em;
-    border: 3px solid #b9b9ba;
+    border-radius:0px 100px;
     padding:2em;
+}
+
+nav, main {
+    padding-left: 12em;
+    padding-right: 12em;
 }
 
 @font-face {
@@ -33,4 +43,14 @@ main {
 @font-face {
     font-family: "futura-std-heavy";
     src: url("./assets/fonts/Futura-Std-Heavy.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "apercu-regular";
+    src: url("./assets/fonts/Apercu-Regular.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "apercu-pro-regular";
+    src: url("./assets/fonts/Apercu-Pro-Regular.otf") format('opentype');
 }

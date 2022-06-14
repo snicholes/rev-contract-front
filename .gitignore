@@ -43,3 +43,6 @@ Thumbs.db
 
 # vscode
 .vscode
+
+# fonts
+src/assets/fonts

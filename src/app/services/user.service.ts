@@ -29,6 +29,7 @@ export class UserService {
 
   setUser(user: Associate | null) {
     localStorage.setItem('contract-user', JSON.stringify(user));
+    this.loggedInUser = user;
   }
 
   getUser(): Associate | null | undefined {

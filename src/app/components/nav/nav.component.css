@@ -1,16 +1,20 @@
 nav {
-    background-color: black;
-    border-bottom: 10px solid #f26925;
-    font-family: 'futura-std-bold';
+    background-color: #00183c;
+    border-bottom: 10px solid #ff7014;
+    font-family: 'degular', 'futura-std-bold', 'sans-serif';
     color:white;
     padding:1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 a {
     color:white;
     text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 3px solid #ff7014;
 }
 
 ul {
@@ -21,11 +25,25 @@ ul {
 li {
     align-self: baseline;
     padding-right: 4em;
-    font-size: 16pt;
+    font-size: 18pt;
 }
 
 span {
     align-self: center;
     padding: 0 1em;
-    font-size: 24pt;
+    font-size: 32pt;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #ff7014;
+    color: white;
+    font-size:16pt;
+    font-family: 'apercu-regular', 'futura-pt-medium', sans-serif;
+    border-radius: 20px;
+    padding:.5em 1.5em 1.5em 1.5em;
+    height: 2em;
+    align-self: center;
+    margin-left: 2em;
 }
