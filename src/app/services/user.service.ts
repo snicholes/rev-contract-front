@@ -12,6 +12,12 @@ export class UserService {
 
   constructor(private http: HttpClient, private urlServ: UrlService) { }
 
+  registerUser(associate:Associate): Observable<Associate> {
+    return this.http.post(this.urlServ.url + 'users', associate).pipe(
+      map(resp => resp as Associate)
+    );
+  }
+
   submitLogin(firstName:string,lastName:string,code:string): Observable<Associate> {
     let credentials = {
       firstName:firstName,

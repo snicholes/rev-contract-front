@@ -18,7 +18,11 @@ export class RubricBoxComponent implements OnInit {
   constructor(private rubricServ: RubricService, private userServ: UserService) { }
 
   ngOnInit(): void {
-    this.newDesc = this.rubric.description;
+    if (this.rubric.description==='') {
+      this.rubric.description = 'Click to edit.';
+    } else {
+      this.newDesc = this.rubric.description;
+    }
   }
 
   switchEditMode(): void {

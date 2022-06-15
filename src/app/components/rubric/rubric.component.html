@@ -4,7 +4,10 @@
         <th *ngFor="let score of rubric | filterRubric:'score'">{{ score }}</th>
     </tr>
     <tr *ngFor="let theme of rubric | filterRubric:'theme'">
-        <td><b>{{theme}}</b></td>
+        <td (mouseenter)="toggleDescription(theme)" (mouseleave)="toggleDescription(theme)">
+            <b>{{theme}}</b>
+            <div *ngIf="showDescription[theme]">{{ themeDescriptions[theme] }}</div>
+        </td>
         <td *ngFor="let bric of rubric | filterRubric:'byTheme':theme">
             <app-rubric-box [rubric]="bric"></app-rubric-box>
         </td>

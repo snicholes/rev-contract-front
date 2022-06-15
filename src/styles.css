@@ -21,8 +21,8 @@ main {
 }
 
 nav, main {
-    padding-left: 12em;
-    padding-right: 12em;
+    /*padding-left: 12em;
+    padding-right: 12em;*/
 }
 
 button {

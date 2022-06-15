@@ -29,6 +29,7 @@ li {
 }
 
 span {
+    text-align: center;
     align-self: center;
     padding: 0 1em;
     font-size: 32pt;
@@ -42,8 +43,9 @@ button {
     font-size:16pt;
     font-family: 'apercu-regular', 'futura-pt-medium', sans-serif;
     border-radius: 20px;
-    padding:.5em 1.5em 1.5em 1.5em;
-    height: 2em;
+    padding:.5em 1.5em;
+    /*height: 2em;*/
+    height:fit-content;
     align-self: center;
     margin-left: 2em;
     border:2px solid transparent;

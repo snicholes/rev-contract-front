@@ -1,11 +1,12 @@
 <main>
     <form *ngIf="showLogin">
         <h2>Login</h2>
+        <span [style]="messageStyle">{{message}}</span>
         <div class="innerForm">
-            <label for="firstName">First Name: </label>
-            <input type="text" [(ngModel)]="firstName" id="firstName" name="firstName"><br>
-            <label for="lastName">Last Name: </label>
-            <input type="text" [(ngModel)]="lastName" id="lastName" name="lastName"><br>
+            <label for="firstNameLogin">First Name: </label>
+            <input type="text" [(ngModel)]="firstName" id="firstNameLogin" name="firstName"><br>
+            <label for="lastNameLogin">Last Name: </label>
+            <input type="text" [(ngModel)]="lastName" id="lastNameLogin" name="lastName"><br>
             <label for="code">Code: </label>
             <input type="password" [(ngModel)]="code" id="code" name="code"><br>
         </div>
@@ -14,16 +15,14 @@
     </form>
     <form *ngIf="!showLogin">
         <h2>Register</h2>
+        <span [style]="messageStyle">{{message}}</span>
         <div class="innerForm">
-            <label for="firstName">First Name: </label>
-            <input required type="text" id="firstName" name="firstName"><br>
-            <label for="lastName">Last Name: </label>
-            <input required type="text" id="lastName" name="lastName"><br>
+            <label for="firstNameReg">First Name: </label>
+            <input required type="text" [(ngModel)]="firstName" id="firstNameReg" name="firstName"><br>
+            <label for="lastNameReg">Last Name: </label>
+            <input required type="text" [(ngModel)]="lastName" id="lastNameReg" name="lastName"><br>
         </div>
         <button type="button" (click)="submitRegister()">Submit</button><br>
         <a (click)="switchForm()">Already have an account? Click here to log in.</a>
     </form>
-    <div *ngIf="loading">
-        Loading...
-    </div>
 </main>
