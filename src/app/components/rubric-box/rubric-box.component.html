@@ -1,1 +1,11 @@
-{{ rubric.description }}
+<div class="main">
+    <p *ngIf="!editMode; else edit" (click)="switchEditMode()">{{ rubric.description }}</p>
+    <ng-template #edit>
+        <textarea [(ngModel)]="newDesc" rows="4"></textarea>
+        <span>{{ loadMsg }}</span>
+    </ng-template>
+    <div class="buttons">
+        <button *ngIf="editMode" type="button" (click)="switchEditMode()" [id]="'rubricEditBtn_' + rubric.id">{{ modeBtnMsg }}</button>
+        <button *ngIf="editMode" type="button" (click)="submitEdit()" [id]="'submitRubricBtn_' + rubric.id">Submit</button>
+    </div>
+</div>

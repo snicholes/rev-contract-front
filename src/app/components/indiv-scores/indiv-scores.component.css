@@ -1,0 +1,10 @@
+section {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section::after {
+    content:'';
+    flex:auto;
+}

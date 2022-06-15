@@ -1,0 +1,23 @@
+p {
+    height:100%;
+    display:table-row;
+}
+
+.main {
+    height:100%;
+    display: table;
+}
+
+.buttons {
+    margin-top:1em;
+    display: table-row;
+}
+
+button {
+    display:table-cell;
+}
+
+button:disabled {
+    color:#ffcf00;
+    background-color: white;
+}

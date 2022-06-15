@@ -9,3 +9,7 @@ main {
     "label input"
     / 30% 60% 10%;
 }
+
+a:hover {
+    border-bottom: 3px solid #ff7014;
+}

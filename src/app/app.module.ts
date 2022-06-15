@@ -17,6 +17,12 @@ import { RubricBoxComponent } from './components/rubric-box/rubric-box.component
 import { SubmitScoresComponent } from './components/submit-scores/submit-scores.component';
 import { ScoresComponent } from './components/scores/scores.component';
 import { ScoreService } from './services/score.service';
+import { RubricService } from './services/rubric.service';
+import { IndivScoresComponent } from './components/indiv-scores/indiv-scores.component';
+import { ScoreSummaryComponent } from './components/score-summary/score-summary.component';
+import { ScoreComponent } from './components/score/score.component';
+import { FilterScoresPipe } from './pipes/filter-scores.pipe';
+import { ScoreColorDirective } from './directives/score-color.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,12 @@ import { ScoreService } from './services/score.service';
     FilterRubricPipe,
     RubricBoxComponent,
     SubmitScoresComponent,
-    ScoresComponent
+    ScoresComponent,
+    IndivScoresComponent,
+    ScoreSummaryComponent,
+    ScoreComponent,
+    FilterScoresPipe,
+    ScoreColorDirective
   ],
   imports: [
     BrowserModule,
@@ -40,7 +51,8 @@ import { ScoreService } from './services/score.service';
   providers: [
     UserService,
     UrlService,
-    ScoreService
+    ScoreService,
+    RubricService
   ],
   bootstrap: [AppComponent]
 })

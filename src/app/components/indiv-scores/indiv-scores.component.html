@@ -1,0 +1,10 @@
+<h2>Your Scores</h2>
+<label for="scoreType">Show: </label>
+<select [(ngModel)]="show">
+    <option value="All">All</option>
+    <option *ngFor="let theme of themes" [value]="theme">{{ theme }}</option>
+    <option *ngFor="let week of weeks" [value]="week">Week {{ week }}</option>
+</select>
+<section>
+    <app-score *ngFor="let score of associate.actualScores | filterScores:show" [score]="score"></app-score>
+</section>

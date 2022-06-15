@@ -1,14 +1,10 @@
 <main>
     <h1>Welcome, {{ associate.firstName }}</h1>
-    <h2>Your Score Summary</h2>
-    <span *ngIf="!scoreSummary">Calculating... Please be patient.</span><br>
-    <h3 *ngIf="scoreSummary">Overall: {{ scoreSummary.Overall | number:'1.2-2' }}</h3>
-    <div>
-        <h4 *ngIf="scoreSummary">Scores By Theme</h4>
-        <canvas id="rubricScoreChart"></canvas>
-    </div>
-    <div>
-        <h4 *ngIf="scoreSummary">Scores By Week</h4>
-        <canvas id="weekScoreChart"></canvas>
-    </div>
+    <a (click)="switchViewMode()">{{ viewModeMsg }}</a>
+    <ng-container *ngIf="viewModeMsg.includes('Individual'); else individual">
+        <app-score-summary [associate]="associate"></app-score-summary>
+    </ng-container>
+    <ng-template #individual>
+        <app-indiv-scores [associate]="associate"></app-indiv-scores>
+    </ng-template>
 </main>
